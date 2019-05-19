@@ -3,12 +3,68 @@ background: #CCF5F4;
 box-sizing: border-box;
 }
 
+section::before,
+section::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-position: 0 0;
+}
+
+section.content{
+  top: 500px;
+  display: inline-block;
+  padding-top: 3em;
+}
+
+section.foot{
+background-image:
+  url(dragon.jpg);
+background-position: 100% 100%;
+background-size: 100%;
+height: 634px;
+
+}
+
+section::before{
+  top: 0;
+  height: 41px;
+  background-color: transparent;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    url(dragon.jpg);
+  background-position: 0 0;
+  animation: move 1s infinite linear;
+}
+
+section::after{
+  top: 41px;
+  left: 8px;
+  height: 100px;
+  background-size: cover;
+  background-image:
+    url(banner.png);
+  background-position: relative;
+  animation: move2 is infinite linear;
+}
+
+@keyframes move{
+  to{ background-position-x: 120px; }
+}
+
+@keyframes move2{
+  to{ background-position-x: -120px; }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Style the header */
 header {
+  background-size: 100% 100%;
   background-color: #CCF5F4;
   padding: 30px;
   text-align: center;
