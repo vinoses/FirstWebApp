@@ -51,5 +51,66 @@
       "function": "each()",
       "description": "iterates over a set of matched elements"
     }
+  ],
+  "javscriptfunctions": [{
+      "function": "spread ({...})",
+      "description": "expands an array into its elements or objects"
+    },
+    {
+      "function": "for of, iterator",
+      "description": "loops/iterates through the collection, replaces for-loop"
+    },
+    {
+      "function": "includes()",
+      "description": "boolean check if a specific string exists in a collection"
+    },
+    {
+      "function": "some()",
+      "description": "boolean check if some elements exists in an array, for functions not strings"
+    },
+    {
+      "function": "every()",
+      "description": "boolean check through the array, some() with conditional "
+    },
+    {
+      "function": "filter()",
+      "description": "creates a new array with all elements that pass the test"
+    },
+    {
+      "function": "map()",
+      "description": "like filter() returns a new array, except can be modified"
+    },
+    {
+      "function": "reduce()",
+      "description": "transform an array into something else"
+    },
+    {
+      "function": "arrays",
+      "description": "concat(),indexOf(),join(),lastIndexOf(),pop(),push(),toString(),splice())"
+    },
+    {
+      "function": "operators",
+      "description": "+,-,*,/,...,%,++,--,==,=== (value & type),!=,!==,>,<,>=,<=,? (ternary)"
+    },
+    {
+      "function": "logic",
+      "description": "&&,||,!,BITWISE: &,|,~,^,<<,>>,>>>"
+    },
+    {
+      "function": "outputting",
+      "description": "alert(),confirm(),console.log(),document.write(),prompt()"
+    },
+    {
+      "function": "global",
+      "description": "decodeURI(),eval(),isFinite(),isNaN(),Number(),parseFloat(),parseInt()"
+    },
+    {
+      "function": "variables",
+      "description": "var (global), const (final), let (local)"
+    },
+    {
+      "function": "data types",
+      "description": "Numbers, Variables, Text, Operations, Boolean, Objects"
+    }
   ]
 }
