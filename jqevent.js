@@ -20,16 +20,6 @@ $(document).ready(function() {
         app=false; count++;   
       });
     }; 
-
-    Cookies.set("reciever", "jq");
-    var c = Cookies.get("caller");
-    if(c !== "jq") { 
-      $("table").show(); 
-    } else { 
-      $("table").toggle(); 
-    }
-    Cookies.set('caller','jq');
-
   });  
 });
 
