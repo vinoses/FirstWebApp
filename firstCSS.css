@@ -77,6 +77,19 @@ font-variant: small-caps;
 text-transform: none;
 }
 
+h2.font {
+font-family: "Times New Roman", Times, serif;
+font-size: 15px;
+letter-spacing: 2px;
+word-spacing: 2px;
+color: #1C6EA9;
+font-weight: 800;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: small-caps;
+text-transform: none;
+}
+
 table.lightblue {
   border: 2px solid #1C6EA4;
   background-color: #CCF5F4;
