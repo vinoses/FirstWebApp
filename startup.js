@@ -8,4 +8,5 @@ $(document).ready(function() {
 /*TODO: fix circular menu description to link in json
 		finish json link parameter implementation
 		change animation from infinite
+		fix coloring for readability
 		*/
