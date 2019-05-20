@@ -1,10 +1,15 @@
 body.general {
-background: #CCF5F4;
-box-sizing: border-box;
+  background: linear-gradient(272deg, #5ea4dd, #114963, #CCF5F4);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
 }
 
 section::before,
 section::after{
+  /*required for after content loading*/
   content: "";
   position: absolute;
   display: block;
@@ -13,45 +18,69 @@ section::after{
 }
 
 section.content{
-  top: 500px;
-  display: inline-block;
+  background-color: transparent;
+  display: grid;
   padding-top: 3em;
 }
 
+button:hover {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+nav.buttons{
+  background-color: transparent;
+  flex-direction: row;
+  position: relative;
+  top: -10px;
+
+}
+
 section.foot{
+background-color: transparent;
 background-image:
   url(dragon.jpg);
 background-position: 100% 100%;
-background-size: 100%;
-height: 634px;
-
+background-size: cover;
+height: 834px;
 }
 
 section::before{
   top: 0;
-  height: 41px;
-  background-color: transparent;
-  background-size: 40px 40px;
+
   background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
-    url(dragon.jpg);
-  background-position: 0 0;
-  animation: move 1s infinite linear;
+    url(dragon.jpg),
+    url(banner.png),
+    linear-gradient(to right, grey 1px, transparent 1px);
+
+  background-repeat: no-repeat,
+                     no-repeat, no-repeat;
+  background-size: cover, 250px 120px;
+
+  background-position: 0 -40px,
+                       0 0;
+  animation: move 30s infinite cubic-bezier(.79,.14,.15,.86);
 }
 
 section::after{
-  top: 41px;
-  left: 8px;
-  height: 100px;
-  background-size: cover;
-  background-image:
-    url(banner.png);
-  background-position: relative;
-  animation: move2 is infinite linear;
-}
+  top: 0;
 
-@keyframes move{
-  to{ background-position-x: 120px; }
+  background-image:
+  linear-gradient(to right, grey 1px, transparent 1px),
+    url(dragon.jpg),
+    url(banner.png);
+
+  height: 200px;
+
+  background-blend-mode: difference, darken;
+
+  background-repeat: no-repeat,
+                     no-repeat;
+  background-size: cover, auto 60px;
+                   
+  background-position: 0 -40px,
+                       0 0;
+  animation: move 15s infinite cubic-bezier(.69,.24,.15,.86);
 }
 
 @keyframes move2{
@@ -65,7 +94,7 @@ body {
 /* Style the header */
 header {
   background-size: 100% 100%;
-  background-color: #CCF5F4;
+  background-color: transparent;
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -78,34 +107,17 @@ section {
   display: flex;
 }
 
-/* Style the navigation menu */
-nav {
+h1{
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  background: #CCF5F4;
+  background-color: transparent;
   padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-/* Style the content */
-article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  background-color: #CCF5F4;
-  padding: 10px;
 }
 
 /* Style the footer */
 footer {
-  background-color: #CCF5F4;
-  padding: 10px;
+  background-color: transparent;
   text-align: center;
   color: white;
 }
@@ -118,17 +130,47 @@ footer {
   }
 }
 
+/*animated background coloring*/
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 96%}
+    50%{background-position:100% 5%}
+    100%{background-position:0% 96%}
+}
+
+/*movement direction*/
+@keyframes move{
+  to{ background-position-x: 100%; }
+}
+
 h1.font {
 font-family: "Times New Roman", Times, serif;
 font-size: 25px;
 letter-spacing: 2px;
 word-spacing: 2px;
-color: #1C6EA4;
-font-weight: 800;
+color: black;
+font-weight: 400;
 text-decoration: none solid rgb(68, 68, 68);
 font-style: normal;
 font-variant: small-caps;
 text-transform: none;
+}
+
+a {
+  color: red;
+}
+a:hover {
+  background-color: white;
+  color: black;
 }
 
 h2.font {
@@ -136,8 +178,8 @@ font-family: "Times New Roman", Times, serif;
 font-size: 15px;
 letter-spacing: 2px;
 word-spacing: 2px;
-color: #1C6EA9;
-font-weight: 800;
+color: white;
+font-weight: 400;
 text-decoration: none solid rgb(68, 68, 68);
 font-style: normal;
 font-variant: small-caps;
@@ -165,7 +207,7 @@ table.lightblue tr:nth-child(even) {
 }
 table.lightblue thead {
   background: #329FA4;
-  background: -moz-linear-gradient(top, #65b7bb 0%, #46a8ad 66%, #329FA4 100%);
+  background: linear-gradient(to top, #65b7bb 0%, #46a8ad 66%, #329FA4 100%);
   background: -webkit-linear-gradient(top, #65b7bb 0%, #46a8ad 66%, #329FA4 100%);
   background: linear-gradient(to bottom, #65b7bb 0%, #46a8ad 66%, #329FA4 100%);
   border-bottom: 2px solid #444444;
@@ -186,7 +228,7 @@ table.lightblue tfoot {
   font-weight: bold;
   color: #FFFFFF;
   background: #D0E4F5;
-  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
   background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
   background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
   border-top: 2px solid #444444;

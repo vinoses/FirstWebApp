@@ -13,16 +13,21 @@ $(document).ready(function() {
       var count = 0;
       var pieces;
 
-      //Button Event Handlers
+      //Cookie based Event Handler, .text updates and data selection
+
+      //javascript button event
       if(id === "js"){
         pieces = data.javscriptfunctions;
         if($("table").is(':visible')){ 
           $("h1").text("Javascript 80/20");
-          $("h2").text("Also consider: async / await, async control flow," + 
-          "Promise.all, Destructuring & default values, Truthy & falsy values," +
-          "Optional chaining,Class properties & binding, parcel bundling and transpiling");    
+          $("h2").text("Also: Async/Await - Async Control Flow - " + 
+          "Promise.all - Destructuring & Default Values - Truthy/Falsy Values," +
+          "Chaining - Class Properties & Binding - Bundling and Transpiling");    
         }
-      } else if (id === "jq") {
+      } 
+
+      //jQeury button event
+      else if (id === "jq") {
         pieces = data.jqueryfunctions;
         if($("table").is(':visible')){         
           $("h1").text("jQuery 80/20");
