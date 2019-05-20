@@ -4,7 +4,7 @@ $(document).ready(function() {
     var app = false;  
 
     //getJSON parses json into objects
-    $.getJSON("https://api.myjson.com/bins/9j806", function( data ) {
+    $.getJSON("https://api.myjson.com/bins/1bykxi", function( data ) {
         createTable(data);      
     });
 
@@ -19,7 +19,7 @@ $(document).ready(function() {
       if(id === "js"){
         pieces = data.javscriptfunctions;
         if($("table").is(':visible')){ 
-          $("h1").text("Javascript 80/20");
+          $("h1").text("Javascript - Just the 80/20");
           $("h2").text("Also: Async/Await - Async Control Flow - " + 
           "Promise.all - Destructuring & Default Values - Truthy/Falsy Values," +
           "Chaining - Class Properties & Binding - Bundling and Transpiling");    
@@ -30,9 +30,18 @@ $(document).ready(function() {
       else if (id === "jq") {
         pieces = data.jqueryfunctions;
         if($("table").is(':visible')){         
-          $("h1").text("jQuery 80/20");
+          $("h1").text("jQuery - Just the 80/20");
           $("h2").text("")
                .append("<div> <a href=\"https://github.com/nefe/You-Dont-Need-jQuery\">but... You Dont Need jQuery</a> </div>");
+        }
+      }
+
+      //CSS button event
+      else if (id === "css") {
+        pieces = data.cssfunctions;
+        if($("table").is(':visible')){         
+          $("h1").text("css is all grown up - CSS3");
+          $("h2").text("GOT... the new Highlander!");               
         }
       };
       
@@ -43,7 +52,12 @@ $(document).ready(function() {
               "<td>" + val.function + "</td>" + 
               "<td>" + val.description +"</td>" + 
               "</tr>"); 
-        app=false; count++;   
+        if(val.link){
+          $("#tr" + count).append("<div><a  href=" + '"' + val.link + '"' + "></div>");
+        } 
+        app=false; count++;
+
+
       });
     }; 
   });  

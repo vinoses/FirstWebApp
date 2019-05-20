@@ -5,3 +5,7 @@ $(document).ready(function() {
   $("h2").text("Good to see you!");
   $("#table").html("");
 });
+/*TODO: fix circular menu description to link in json
+		finish json link parameter implementation
+		change animation from infinite
+		*/

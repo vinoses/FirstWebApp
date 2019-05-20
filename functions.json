@@ -112,5 +112,56 @@
       "function": "data types",
       "description": "Numbers, Variables, Text, Operations, Boolean, Objects"
     }
+  ],
+    "cssfunctions": [{
+      "function": "counters",
+      "description": "CSS counters can replace JavaScript in some situations",
+      "link" : "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters"
+    },
+    {
+      "function": "smart quotes",
+      "description": "quotes property allows to specify which types of quotes are used",
+      "link" : "https://www.w3schools.com/cssref/pr_gen_quotes.asp"
+    },
+    {
+      "function": "hover effects",
+      "description": "event based effects from curser position",
+      "link" : "https://www.w3schools.com/cssref/sel_hover.asp"
+    },
+    {
+      "function": "icons",
+      "description": "can display a file icons if relavent",
+      "link" : "https://www.w3schools.com/css/css_icons.asp"
+    },
+    {
+      "function": "arrow",
+      "description": "can insert arrows, like for links whether local or not",
+      "link" : "https://www.w3schools.com/howto/howto_css_arrows.asp"
+    },
+    {
+      "function": "circular menu",
+      "description": "https://codepen.io/SaraSoueidan/pen/wpHBt",
+      "link" : "https://codepen.io/SaraSoueidan/pen/wpHBt"
+    },
+    {
+      "function": "gooey menu",
+      "description": "modern CSS3 and SVG",
+      "link" : "https://codepen.io/lbebber/pen/LELBEo"
+    },
+    {
+      "function": "modals",
+      "description": "boxing, responsive and compatible back to Internet Explorer 8",
+      "link" : "https://drublic.github.io/css-modal/"
+    },
+    {
+      "function": "parallax",
+      "description": "scrolling effect. It looks great, but is a bit sluggish sometimes",
+      "link" : "https://codepen.io/keithclark/pen/JycFw"
+    },
+    {
+      "function": "3d model",
+      "description": "an interactive css 3D model of the solar system",
+      "link" : "https://codepen.io/juliangarnier/pen/idhuG"
+    }
   ]
 }
